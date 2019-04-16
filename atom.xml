@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-19T07:36:34.201Z</updated>
+  <updated>2019-04-16T09:14:16.421Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>VMware 三种工作模式</title>
     <link href="http://yoursite.com/article/VMware%E7%9A%84%E4%B8%89%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/article/VMware的三种工作模式/</id>
     <published>2019-04-16T08:49:46.294Z</published>
-    <updated>2017-07-19T07:36:34.201Z</updated>
+    <updated>2019-04-16T09:14:16.421Z</updated>
     
     <content type="html"><![CDATA[<h1 id="VMware-三种工作模式"><a href="#VMware-三种工作模式" class="headerlink" title="VMware 三种工作模式"></a>VMware 三种工作模式</h1><h2 id="1-桥接模式（bridged）"><a href="#1-桥接模式（bridged）" class="headerlink" title="1.桥接模式（bridged）"></a>1.桥接模式（bridged）</h2><p>VMware 虚拟出来的操作系统就像局域网中的一台独立的主机，它可以访问网内任何一台机器。</p>
 <p>bridged模式下，用户需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于<strong>同一网段</strong>，这样虚拟系统才能和宿主机器进行通信。</p>
@@ -39,6 +39,10 @@
     
     </summary>
     
+      <category term="日常" scheme="http://yoursite.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="日常" scheme="http://yoursite.com/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   

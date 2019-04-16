@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title></title>
+      <title><![CDATA[VMware 三种工作模式]]></title>
       <url>/article/VMware%E7%9A%84%E4%B8%89%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F/</url>
       <content type="html"><![CDATA[<h1 id="VMware-三种工作模式"><a href="#VMware-三种工作模式" class="headerlink" title="VMware 三种工作模式"></a>VMware 三种工作模式</h1><h2 id="1-桥接模式（bridged）"><a href="#1-桥接模式（bridged）" class="headerlink" title="1.桥接模式（bridged）"></a>1.桥接模式（bridged）</h2><p>VMware 虚拟出来的操作系统就像局域网中的一台独立的主机，它可以访问网内任何一台机器。</p>
 <p>bridged模式下，用户需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于<strong>同一网段</strong>，这样虚拟系统才能和宿主机器进行通信。</p>
@@ -16,6 +16,18 @@
 <p><strong>注：上述提到的NAT模式下的VMnet8 虚拟网络，host-only模式下的VMnet1 虚拟网络，以及bridged 模式下的VMnet0 虚拟网络，都由VMware虚拟机自动配置生成，不需要用户自行设置。</strong><br>VMnet8 和 VMnet1 提供DHCP服务，VMnet0虚拟网络则不提供DHCP服务。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> 日常 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 日常 </tag>
+            
+        </tags>
         
     </entry>
     
