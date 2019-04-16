@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Xavier私人书吧</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="VMware 三种工作模式1.桥接模式（bridged）VMware 虚拟出来的操作系统就像局域网中的一台独立的主机，它可以访问网内任何一台机器。 bridged模式下，用户需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于同一网段，这样虚拟系统才能和宿主机器进行通信。 由于这个虚拟系统是局域网中的一个独立的主机系统，则可以手工配置它的TCP/IP配置信息，以实现通过局域网网关或路由">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xavier私人书吧">
+<meta property="og:url" content="http://yoursite.com/article/VMware的三种工作模式/index.html">
+<meta property="og:site_name" content="Xavier私人书吧">
+<meta property="og:description" content="VMware 三种工作模式1.桥接模式（bridged）VMware 虚拟出来的操作系统就像局域网中的一台独立的主机，它可以访问网内任何一台机器。 bridged模式下，用户需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于同一网段，这样虚拟系统才能和宿主机器进行通信。 由于这个虚拟系统是局域网中的一个独立的主机系统，则可以手工配置它的TCP/IP配置信息，以实现通过局域网网关或路由">
+<meta property="og:updated_time" content="2017-07-19T07:36:34.201Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Xavier私人书吧">
+<meta name="twitter:description" content="VMware 三种工作模式1.桥接模式（bridged）VMware 虚拟出来的操作系统就像局域网中的一台独立的主机，它可以访问网内任何一台机器。 bridged模式下，用户需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于同一网段，这样虚拟系统才能和宿主机器进行通信。 由于这个虚拟系统是局域网中的一个独立的主机系统，则可以手工配置它的TCP/IP配置信息，以实现通过局域网网关或路由">
+  
+    <link rel="alternate" href="/atom.xml" title="Xavier私人书吧" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Xavier私人书吧</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-VMware的三种工作模式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/article/VMware的三种工作模式/" class="article-date">
+  <time datetime="2019-04-16T08:49:46.294Z" itemprop="datePublished">2019-04-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="VMware-三种工作模式"><a href="#VMware-三种工作模式" class="headerlink" title="VMware 三种工作模式"></a>VMware 三种工作模式</h1><h2 id="1-桥接模式（bridged）"><a href="#1-桥接模式（bridged）" class="headerlink" title="1.桥接模式（bridged）"></a>1.桥接模式（bridged）</h2><p>VMware 虚拟出来的操作系统就像局域网中的一台独立的主机，它可以访问网内任何一台机器。</p>
+<p>bridged模式下，用户需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于<strong>同一网段</strong>，这样虚拟系统才能和宿主机器进行通信。</p>
+<p>由于这个虚拟系统是局域网中的一个独立的主机系统，则可以手工配置它的TCP/IP配置信息，以实现通过局域网网关或路由器访问互联网。</p>
+<p>bridged模式的虚拟系统和宿主机的关系，就像连接在同一集线器的两台计算机，只需为虚拟系统配置IP地址和子网掩码，就可以让它们相互通信。</p>
+<p>若要利用VMware在局域网内新建一个虚拟服务器，为局域网用户提供网络服务，就应该选择bridged模式。</p>
+<h2 id="2-网络地址转换模式（NAT）"><a href="#2-网络地址转换模式（NAT）" class="headerlink" title="2.网络地址转换模式（NAT）"></a>2.网络地址转换模式（NAT）</h2><p>NAT模式，即让虚拟系统借助NAT（网络地址转换）功能，通过宿主机器所在网络来访问公网，即使用NAT模式可以实现在虚拟系统中访问互联网。</p>
+<p>NAT模式下的虚拟系统的TCP/IP配置信息由VMnet8 虚拟网络的DHCP服务器提供，无法进行手工修改，因此虚拟系统无法和本局域网中的其他真实主机进行通信。采用NAT模式最大的优势是虚拟系统接入互联网非常简单，不需要进行任何其他配置，只需要宿主机能访问互联网即可。</p>
+<h2 id="3-主机模式（host-only）"><a href="#3-主机模式（host-only）" class="headerlink" title="3.主机模式（host-only）"></a>3.主机模式（host-only）</h2><p>采用 host-only 模式可将真实环境和虚拟环境隔离开，在host-only 模式中，所有的虚拟系统是可以相互通信的，但虚拟系统和真实的网络是被隔离开的，虚拟系统和宿主机器是可以相互通信的，相当于这两台机器通过双绞线互连；虚拟系统的TCP/IP 配置信息（<em>如IP地址、网关地址、DNS服务器等</em>），可以由VMnet1 虚拟网络的DHCP（动态主机配置协议）服务器来动态分配。</p>
+<p><strong>注：上述提到的NAT模式下的VMnet8 虚拟网络，host-only模式下的VMnet1 虚拟网络，以及bridged 模式下的VMnet0 虚拟网络，都由VMware虚拟机自动配置生成，不需要用户自行设置。</strong><br>VMnet8 和 VMnet1 提供DHCP服务，VMnet0虚拟网络则不提供DHCP服务。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/article/VMware的三种工作模式/" data-id="cjujjw1f700005sih6bn0bqvk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/article/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/日常/">日常</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/日常/" style="font-size: 10px;">日常</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/article/VMware的三种工作模式/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/article/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Xavier Shun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

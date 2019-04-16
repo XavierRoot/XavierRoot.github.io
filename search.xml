@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title></title>
+      <url>/article/VMware%E7%9A%84%E4%B8%89%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<h1 id="VMware-三种工作模式"><a href="#VMware-三种工作模式" class="headerlink" title="VMware 三种工作模式"></a>VMware 三种工作模式</h1><h2 id="1-桥接模式（bridged）"><a href="#1-桥接模式（bridged）" class="headerlink" title="1.桥接模式（bridged）"></a>1.桥接模式（bridged）</h2><p>VMware 虚拟出来的操作系统就像局域网中的一台独立的主机，它可以访问网内任何一台机器。</p>
+<p>bridged模式下，用户需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于<strong>同一网段</strong>，这样虚拟系统才能和宿主机器进行通信。</p>
+<p>由于这个虚拟系统是局域网中的一个独立的主机系统，则可以手工配置它的TCP/IP配置信息，以实现通过局域网网关或路由器访问互联网。</p>
+<p>bridged模式的虚拟系统和宿主机的关系，就像连接在同一集线器的两台计算机，只需为虚拟系统配置IP地址和子网掩码，就可以让它们相互通信。</p>
+<p>若要利用VMware在局域网内新建一个虚拟服务器，为局域网用户提供网络服务，就应该选择bridged模式。</p>
+<h2 id="2-网络地址转换模式（NAT）"><a href="#2-网络地址转换模式（NAT）" class="headerlink" title="2.网络地址转换模式（NAT）"></a>2.网络地址转换模式（NAT）</h2><p>NAT模式，即让虚拟系统借助NAT（网络地址转换）功能，通过宿主机器所在网络来访问公网，即使用NAT模式可以实现在虚拟系统中访问互联网。</p>
+<p>NAT模式下的虚拟系统的TCP/IP配置信息由VMnet8 虚拟网络的DHCP服务器提供，无法进行手工修改，因此虚拟系统无法和本局域网中的其他真实主机进行通信。采用NAT模式最大的优势是虚拟系统接入互联网非常简单，不需要进行任何其他配置，只需要宿主机能访问互联网即可。</p>
+<h2 id="3-主机模式（host-only）"><a href="#3-主机模式（host-only）" class="headerlink" title="3.主机模式（host-only）"></a>3.主机模式（host-only）</h2><p>采用 host-only 模式可将真实环境和虚拟环境隔离开，在host-only 模式中，所有的虚拟系统是可以相互通信的，但虚拟系统和真实的网络是被隔离开的，虚拟系统和宿主机器是可以相互通信的，相当于这两台机器通过双绞线互连；虚拟系统的TCP/IP 配置信息（<em>如IP地址、网关地址、DNS服务器等</em>），可以由VMnet1 虚拟网络的DHCP（动态主机配置协议）服务器来动态分配。</p>
+<p><strong>注：上述提到的NAT模式下的VMnet8 虚拟网络，host-only模式下的VMnet1 虚拟网络，以及bridged 模式下的VMnet0 虚拟网络，都由VMware虚拟机自动配置生成，不需要用户自行设置。</strong><br>VMnet8 和 VMnet1 提供DHCP服务，VMnet0虚拟网络则不提供DHCP服务。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/article/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 日常 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 日常 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
