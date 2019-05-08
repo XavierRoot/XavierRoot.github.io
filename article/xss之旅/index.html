@@ -10,7 +10,7 @@
                                                                                   name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   <meta name="description" content="日志 博客">
-  <title>日常 | 起风了~</title>
+  <title>xss之旅 | 起风了~</title>
   <link rel="stylesheet" type="text/css"
                                                                                   href="//fonts.loli.net/css?family=Source+Code+Pro">
   <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.3">
@@ -26,12 +26,11 @@
   <div class="body_container">
     <div id="header">
       <div class="site-name">
-        <h1 class="hidden">起风了~</h1><a id="logo" href="/.">起风了~</a>
+        <h1 class="hidden">xss之旅</h1><a id="logo" href="/.">起风了~</a>
         <p class="description">记录漫长的道路。</p>
       </div>
-      <div id="nav-menu"><a href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"
-                                                                                        class="current"><i
-                                                                                          class="fa fa-archive">
+      <div id="nav-menu"><a href="/." class="current"><i class="fa fa-home">
+            首页</i></a><a href="/archives/"><i class="fa fa-archive">
             归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a
                                                                                         href="/atom.xml"><i
                                                                                           class="fa fa-rss">
@@ -55,22 +54,95 @@
       <div class="layout-l">
         <div class="content_container">
           <div class="post">
-            <h1 class="label-title">正在查看<i class="fa fa-biao">日常</i>下的文章</h1>
-            <div class="post-archive">
-              <div class="archive-wrap tag-cat">
-                <ul class="listing">
-                  <li><a href="/article/hello-world/" title="Hello World"><span
-                                                                                                      class="tite">2017/08/30
-                        Hello World</span></a></li>
-                </ul>
-              </div>
+            <h1 class="post-title">xss之旅</h1>
+            <div class="post-meta"><a href="/article/xss之旅/#comments"
+                                                                                              class="comment-count"></a>
+              <p><span class="date">Apr 17, 2019</span><span><a href="/categories/XSS/"
+                                                                                                  class="category">XSS</a></span><span><i
+                                                                                                  id="busuanzi_container_page_pv"><i
+                                                                                                    id="busuanzi_value_page_pv"></i><i>点击</i></i></span>
+              </p>
             </div>
+            <div class="post-content">
+              <h1 id="XSS之旅"><a href="#XSS之旅" class="headerlink"
+                                                                                                title="XSS之旅"></a>XSS之旅
+              </h1>
+              <h2 id="一、XSS原理"><a href="#一、XSS原理" class="headerlink"
+                                                                                                title="一、XSS原理"></a>一、XSS原理
+              </h2>
+              <p>网上资料很多，不说了</p>
+              <h2 id="二、常见XSS-攻击载荷"><a href="#二、常见XSS-攻击载荷" class="headerlink"
+                                                                                                title="二、常见XSS 攻击载荷"></a>二、常见XSS
+                攻击载荷</h2>
+              <p><code>&lt;script&gt;</code>标签，<code>&lt;svg&gt;,
+                  &lt;img&gt;</code><br><br><code>onload
+                  等事件</code>,<code>alert,confirm</code>
+              </p>
+              <h2 id="三、场景"><a href="#三、场景" class="headerlink"
+                                                                                                title="三、场景"></a>三、场景
+              </h2>
+              <h2 id="四、XSS防护及绕过"><a href="#四、XSS防护及绕过" class="headerlink"
+                                                                                                title="四、XSS防护及绕过"></a>四、XSS防护及绕过
+              </h2>
+              <h2 id="五、利用方式"><a href="#五、利用方式" class="headerlink"
+                                                                                                title="五、利用方式"></a>五、利用方式
+              </h2>
+            </div>
+            <div class="post-copyright">
+              <blockquote>
+                <p>原文作者: Xavier</p>
+                <p>原文链接: <a
+                                                                                                  href="http://yoursite.com/article/xss之旅/">http://yoursite.com/article/xss之旅/</a>
+                </p>
+                <p>版权声明: 转载请注明出处</p>
+              </blockquote>
+            </div>
+            <div class="tags"><a href="/tags/xss/">xss</a></div>
+            <div class="post-share">
+              <div class="social-share"><span>分享到:</span></div>
+            </div>
+            <div class="post-nav"><a href="/article/sysmon 说明/"
+                                                                                              class="pre">sysmon
+                说明</a><a href="/article/hello-world/" class="next">Hello
+                World</a></div>
+            <div id="comments"></div>
           </div>
         </div>
       </div>
       <div class="layout-r">
         <div id="sidebar">
           <div class="search-pla"></div>
+          <div id="toc" class="widget">
+            <div class="widget-title"><i class="fa fa-fei">文章目录</i></div>
+            <ol class="toc">
+              <li class="toc-item toc-level-1"><a class="toc-link"
+                                                                                                href="#XSS之旅"><span
+                                                                                                  class="toc-text">XSS之旅</span></a>
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-2"><a class="toc-link"
+                                                                                                    href="#一、XSS原理"><span
+                                                                                                      class="toc-text">一、XSS原理
+                      </span></a></li>
+                  <li class="toc-item toc-level-2"><a class="toc-link"
+                                                                                                    href="#二、常见XSS-攻击载荷"><span
+                                                                                                      class="toc-text">二、常见XSS
+                        攻击载荷</span></a></li>
+                  <li class="toc-item toc-level-2"><a class="toc-link"
+                                                                                                    href="#三、场景"><span
+                                                                                                      class="toc-text">三、场景</span></a>
+                  </li>
+                  <li class="toc-item toc-level-2"><a class="toc-link"
+                                                                                                    href="#四、XSS防护及绕过"><span
+                                                                                                      class="toc-text">四、XSS防护及绕过
+                      </span></a></li>
+                  <li class="toc-item toc-level-2"><a class="toc-link"
+                                                                                                    href="#五、利用方式"><span
+                                                                                                      class="toc-text">五、利用方式
+                      </span></a></li>
+                </ol>
+              </li>
+            </ol>
+          </div>
           <div class="widget">
             <div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div>
             <ul class="post-list">
@@ -152,6 +224,13 @@
                                                                                   async>
   </script>
   <script type="text/javascript" src="/js/search.json.js?v=2.0.3"></script>
+  <script type="text/javascript" src="/js/toctotop.js?v=2.0.3" async></script>
+  <link rel="stylesheet" type="text/css" href="/share/css/share.css">
+  <script type="text/javascript" src="/share/js/social-share.js"
+                                                                                  charset="utf-8">
+  </script>
+  <script type="text/javascript" src="/share/js/qrcode.js" charset="utf-8">
+  </script>
 </body>
 
 </html>

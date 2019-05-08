@@ -3,16 +3,242 @@
   
     
     <entry>
+      <title><![CDATA[sysmon 说明]]></title>
+      <url>/article/sysmon%20%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"><![CDATA[<h1 id="0x01-简介"><a href="#0x01-简介" class="headerlink" title="0x01 简介"></a>0x01
+  简介</h1>
+<p>Sysmon是由Windows Sysinternals出品的一款<br>Sysinternals系列中的工具<br><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon" target="_blank" rel="external">https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon</a>
+</p>
+<p>它能够监视和记录系统活动，包括进程创建、文件创建、网络连接等，并记录到Windows事件日志中</p>
+<h1 id="0x02-日志类别"><a href="#0x02-日志类别" class="headerlink" title="0x02 日志类别"></a>0x02
+  日志类别</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Event ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sysmon Service Status Changed</td>
+      <td>O</td>
+    </tr>
+    <tr>
+      <td>Process Create</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>File Creation Time Changed</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Network Connection</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Sysmon Service State Change</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Process Terminated</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Driver Loaded</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Image Loaded</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>CreateRemoteThread</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>RaWAccessRead</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Process Access</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>File Create</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Registry Object CreateDelete</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Registry Value Create</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>Registry Object Rename</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>File Create Stream Hash</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Sysmon Configuration Changed</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Pipe Created</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>Pipe Connected</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Error</td>
+      <td>255</td>
+    </tr>
+  </tbody>
+</table>
+<h1 id="0x03-安装配置"><a href="#0x03-安装配置" class="headerlink" title="0x03 安装配置"></a>0x03
+  安装配置</h1>
+<ul>
+  <li>安装：\<br><code>sysmon -accepteula -i c:\windows\config.xml</code></li>
+  <li>卸载：\<br><code>sysmon -u</code></li>
+  <li>更新配置文件：\<br><code>sysmon-c c:\windows\config.xml</code></li>
+</ul>
+<h1 id="0x04-使用建议"><a href="#0x04-使用建议" class="headerlink" title="0x04 使用建议"></a>0x04
+  使用建议</h1>
+<ul>
+  <li>
+    推荐使用SwiftOnSecurity的公版配置文件进行mod（https//github.com/SwiftOnSecurity/sysmon-config）
+  </li>
+  <li>实时采集，需要对各类事件做好进程过滤以避免噪音过多</li>
+  <li>sysmon进程的保护和监控，日志文件及时上传集中存储</li>
+  <li>日志采集检测规则已知，需要不断优化检测机制</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 说明书 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> sysymon </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[xss之旅]]></title>
+      <url>/article/xss%E4%B9%8B%E6%97%85/</url>
+      <content type="html"><![CDATA[<h1 id="XSS之旅"><a href="#XSS之旅" class="headerlink" title="XSS之旅"></a>XSS之旅</h1>
+<h2 id="一、XSS原理"><a href="#一、XSS原理" class="headerlink" title="一、XSS原理"></a>一、XSS原理
+</h2>
+<p>网上资料很多，不说了</p>
+<h2 id="二、常见XSS-攻击载荷"><a href="#二、常见XSS-攻击载荷" class="headerlink" title="二、常见XSS 攻击载荷"></a>二、常见XSS
+  攻击载荷</h2>
+<p><code>&lt;script&gt;</code>标签，<code>&lt;svg&gt;,
+    &lt;img&gt;</code><br><br><code>onload 等事件</code>,<code>alert,confirm</code>
+</p>
+<h2 id="三、场景"><a href="#三、场景" class="headerlink" title="三、场景"></a>三、场景</h2>
+<h2 id="四、XSS防护及绕过"><a href="#四、XSS防护及绕过" class="headerlink" title="四、XSS防护及绕过"></a>四、XSS防护及绕过
+</h2>
+<h2 id="五、利用方式"><a href="#五、利用方式" class="headerlink" title="五、利用方式"></a>五、利用方式
+</h2>
+]]></content>
+      
+        <categories>
+            
+            <category> XSS </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> xss </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>/article/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post.
+  Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you
+  get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a>
+  or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.
+</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick
+  Start</h2>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create
+  a new post</h3>
+<figure class="highlight bash">
+  <table>
+    <tr>
+      <td class="gutter">
+        <pre><div class="line">1</div></pre>
+      </td>
+      <td class="code">
+        <pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre>
+      </td>
+    </tr>
+  </table>
+</figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run
+  server</h3>
+<figure class="highlight bash">
+  <table>
+    <tr>
+      <td class="gutter">
+        <pre><div class="line">1</div></pre>
+      </td>
+      <td class="code">
+        <pre><div class="line">$ hexo server</div></pre>
+      </td>
+    </tr>
+  </table>
+</figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate
+  static files</h3>
+<figure class="highlight bash">
+  <table>
+    <tr>
+      <td class="gutter">
+        <pre><div class="line">1</div></pre>
+      </td>
+      <td class="code">
+        <pre><div class="line">$ hexo generate</div></pre>
+      </td>
+    </tr>
+  </table>
+</figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy
+  to remote sites</h3>
+<figure class="highlight bash">
+  <table>
+    <tr>
+      <td class="gutter">
+        <pre><div class="line">1</div></pre>
+      </td>
+      <td class="code">
+        <pre><div class="line">$ hexo deploy</div></pre>
+      </td>
+    </tr>
+  </table>
+</figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
       
