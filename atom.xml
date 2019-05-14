@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-08T08:10:42.252Z</updated>
+  <updated>2019-05-14T07:55:19.127Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>sysmon 说明</title>
     <link href="http://yoursite.com/article/sysmon%20%E8%AF%B4%E6%98%8E/"/>
     <id>http://yoursite.com/article/sysmon 说明/</id>
-    <published>2019-05-08T02:13:00.000Z</published>
-    <updated>2019-05-08T08:10:42.252Z</updated>
+    <published>2019-05-14T07:48:16.000Z</published>
+    <updated>2019-05-14T07:55:19.127Z</updated>
     
     <content type="html"><![CDATA[<h1 id="0x01-简介"><a href="#0x01-简介" class="headerlink" title="0x01 简介"></a>0x01  简介</h1><p>Sysmon是由Windows Sysinternals出品的一款<br>Sysinternals系列中的工具<br><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon" target="_blank" rel="external">https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon</a></p><p>它能够监视和记录系统活动，包括进程创建、文件创建、网络连接等，并记录到Windows事件日志中</p><h1 id="0x02-日志类别"><a href="#0x02-日志类别" class="headerlink" title="0x02 日志类别"></a>0x02  日志类别</h1><table>  <thead>    <tr>      <th>Category</th>      <th>Event ID</th>    </tr>  </thead>  <tbody>    <tr>      <td>Sysmon Service Status Changed</td>      <td>O</td>    </tr>    <tr>      <td>Process Create</td>      <td>1</td>    </tr>    <tr>      <td>File Creation Time Changed</td>      <td>2</td>    </tr>    <tr>      <td>Network Connection</td>      <td>3</td>    </tr>    <tr>      <td>Sysmon Service State Change</td>      <td>4</td>    </tr>    <tr>      <td>Process Terminated</td>      <td>5</td>    </tr>    <tr>      <td>Driver Loaded</td>      <td>6</td>    </tr>    <tr>      <td>Image Loaded</td>      <td>7</td>    </tr>    <tr>      <td>CreateRemoteThread</td>      <td>8</td>    </tr>    <tr>      <td>RaWAccessRead</td>      <td>9</td>    </tr>    <tr>      <td>Process Access</td>      <td>10</td>    </tr>    <tr>      <td>File Create</td>      <td>11</td>    </tr>    <tr>      <td>Registry Object CreateDelete</td>      <td>12</td>    </tr>    <tr>      <td>Registry Value Create</td>      <td>13</td>    </tr>    <tr>      <td>Registry Object Rename</td>      <td>14</td>    </tr>    <tr>      <td>File Create Stream Hash</td>      <td>15</td>    </tr>    <tr>      <td>Sysmon Configuration Changed</td>      <td>16</td>    </tr>    <tr>      <td>Pipe Created</td>      <td>17</td>    </tr>    <tr>      <td>Pipe Connected</td>      <td>18</td>    </tr>    <tr>      <td>Error</td>      <td>255</td>    </tr>  </tbody></table><h1 id="0x03-安装配置"><a href="#0x03-安装配置" class="headerlink" title="0x03 安装配置"></a>0x03  安装配置</h1><ul>  <li>安装：\<br><code>sysmon -accepteula -i c:\windows\config.xml</code></li>  <li>卸载：\<br><code>sysmon -u</code></li>  <li>更新配置文件：\<br><code>sysmon-c c:\windows\config.xml</code></li></ul><h1 id="0x04-使用建议"><a href="#0x04-使用建议" class="headerlink" title="0x04 使用建议"></a>0x04  使用建议</h1><ul>  <li>    推荐使用SwiftOnSecurity的公版配置文件进行mod（https//github.com/SwiftOnSecurity/sysmon-config）  </li>  <li>实时采集，需要对各类事件做好进程过滤以避免噪音过多</li>  <li>sysmon进程的保护和监控，日志文件及时上传集中存储</li>  <li>日志采集检测规则已知，需要不断优化检测机制</li></ul>]]></content>
     
@@ -42,7 +42,11 @@ Category Event ID Sysmon Service Status Changed O Process Create 1 File Creation
       <category term="说明书" scheme="http://yoursite.com/categories/%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
     
     
-      <category term="sysymon" scheme="http://yoursite.com/tags/sysymon/"/>
+      <category term="sysmon" scheme="http://yoursite.com/tags/sysmon/"/>
+    
+      <category term="系统日志" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
     
   </entry>
   

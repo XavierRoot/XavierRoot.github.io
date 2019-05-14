@@ -130,7 +130,11 @@
         
         <tags>
             
-            <tag> sysymon </tag>
+            <tag> sysmon </tag>
+            
+            <tag> 系统日志 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
         
